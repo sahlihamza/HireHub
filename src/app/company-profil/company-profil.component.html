@@ -1,0 +1,204 @@
+<div class="bg_color_palette_gris">
+  <nav class="navbar navbar-expand-lg fw-bold bg_color_palette_gris">
+    <div class="container-fluid">
+      <a class="navbar-brand ms-3" routerLink="/companyconnect">
+        <img src="../../assets/home/logo.png" alt="Logo" height="75px">
+      </a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page"
+              routerLink="/companyconnect">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page"
+              routerLink="/offerscompany">Offers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/freelancercc">Freelancers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/addoffercompany">Add offer</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/favoritefreelancers">Favorite
+              list</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0 me-3">
+          <div class="input-group border_card_color_palette_dark_cyan ">
+            <input class="form-control" type="search" placeholder="Rechercher"
+              aria-label="Search">
+            <div class="input-group-append">
+              <button
+                class="btn btn_bg_outline_color_palette_dark_cyan rounded-0 "
+                type="submit">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+        <button type="button"
+          class="btn_bg_outline_color_palette_orange m-3"
+          routerLink="/companyprofil">Companny X</button>
+        <img src="../../assets/home/logo.png" alt="Logo" height="50px">
+      </div>
+    </div>
+  </nav>
+  <hr>
+
+  <div class="card mt-0 mb-0 m-5 border-0 bg_color_palette_gris ">
+    <div class="row g-0 justify-content-end">
+      <div class="col-md-auto ">
+        <figure class="figure justify-content-end">
+          <img src="../../assets/home/logo.png" class="float-end" alt="Logo"
+            height="150px">
+
+          <figcaption class="figure-caption text-center"> <button type="button"
+              class="btn btn-primary"
+              (click)="openModal()">Edit profile</button>
+          </figcaption>
+        </figure>
+        <ng-template #content let-modal>
+          <div class="modal-header">
+            <h4 class="modal-title">My Modal</h4>
+            <button type="button" class="btn-close" aria-label="Close"
+              (click)="modal.dismiss()">
+            </button>
+          </div>
+          <div class="modal-body">
+            <form [formGroup]="profileForm">
+              <div class="input-group m-2">
+                <!-- <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04"
+                  aria-label="Upload" formControlName="image"> -->
+                <button class="btn btn-outline-primary" type="button" id="inputGroupFileAddon04">Upload</button>
+              </div>
+              <div class="input-group m-2">
+                <input type="text" class="form-control" placeholder="Edit name" aria-describedby="button-addon2"
+                  formControlName="name">
+                <button class="btn btn-outline-primary" type="button" id="button-addon2">Edit</button>
+              </div>
+              <div class="input-group m-2">
+                <input type="text" class="form-control" placeholder="Edit email" aria-describedby="button-addon2"
+                  formControlName="email">
+                <button class="btn btn-outline-primary" type="button" id="button-addon2">Edit</button>
+              </div>
+              <div class="input-group m-2">
+                <input type="text" class="form-control" placeholder="Edit phone" aria-describedby="button-addon2"
+                  formControlName="phone">
+                <button class="btn btn-outline-primary" type="button" id="button-addon2">Edit</button>
+              </div>
+              <div class="input-group m-2">
+                <input type="text" class="form-control" placeholder="Edit site" aria-describedby="button-addon2"
+                  formControlName="website">
+                <button class="btn btn-outline-primary" type="button" id="button-addon2">Edit</button>
+              </div>
+              <div class="input-group m-2">
+                <input type="text" class="form-control" placeholder="Edit adresse" aria-describedby="button-addon2"
+                  formControlName="adresse">
+                <button class="btn btn-outline-primary" type="button" id="button-addon2">Edit</button>
+              </div>
+              <div class="input-group m-2">
+                <textarea type="text" class="form-control" placeholder="Edit description" aria-describedby="button-addon2"
+                  formControlName="description"></textarea>
+                <button class="btn btn-outline-primary" type="button" id="button-addon2">Edit</button>
+              </div>
+            </form>
+          </div>
+          
+          
+         
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary"
+              (click)="modal.close() ;resetFileInput()">Close</button>
+              <button type="button" class="btn btn-primary" (click)="updateProfile()">Save</button>
+          </div>
+        </ng-template>
+
+      </div>
+
+      <div class="col-md-7 bg_color_palette_gris">
+        
+        <h1>{{ company.name }}</h1>
+        <h3>{{ company.email }}</h3>
+        <h4>{{ company.phone }}</h4>
+        <h4>{{ company.website }}</h4>
+        <p>{{ company.adresse }}</p>
+        <p>{{ company.description }}</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class=" bg_color_palette_light_orange">
+    <div class="card container p-5 pt-3 border-0 bg_color_palette_light_orange">
+      <h2 class="text-center text_color_palette_dark_cyan">project done</h2>
+      <ng-container ></ng-container>
+      <!-- <ng-container *ngOnInit="loadCompanyOffersDone()"></ng-container> -->
+      <div class="row row-cols-1 row-cols-md-4 g-4">
+        <div class="col"  *ngFor="let offer of doneOffers">
+          <div class="card bg_color_palette_light_peach border-0 mt-4">
+            <div class="card-body">
+              <h5 class="card-title text_color_palette_dark_cyan"> {{offer.titre}}</h5>
+              <p class="card-text">This is a short card.</p>
+            
+            </div>
+          </div>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+  <!-- undone offers -->
+
+  <div class=" bg_color_palette_dark_cyan">
+    <div class="card container p-5 pt-3 border-0 bg_color_palette_dark_cyan">
+      <h2 class="text-center">project undone</h2>
+      <ng-container *ngFor="let offer of undoneOffers"></ng-container>
+      <div class="row row-cols-1 row-cols-md-4 g-4">
+        <div class="col" *ngFor="let offer of undoneOffers">
+          <div class="card bg_color_palette_light_peach border-0 mt-4">
+            <div class="card-body" >
+              <h5 class="card-title text_color_palette_dark_cyan">{{offer.titre}}</h5>  
+              <p class="card-text">{{offer.description}}</p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <footer class="text-body-secondary mt-5 py-5 bg_color_palette_footer mb-0 ">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col">
+
+          <img src="../../assets/home/logo_foot.png" alt="Logo" height="75px">
+          <br>
+          <a class="navbar-brand ms-3" routerLink="/home"><p
+              class="text-decoration-underline text-light">More informations</p>
+          </a>
+          <p class="text-light">Designed and built with all the love in the
+            world by the HireHub
+            team with the help of our contributors.</p>
+        </div>
+        <div class="col">
+        </div>
+        <div class="col">
+          <h3 class="text-light ">
+            <p>Follow us</p>
+            <i class="bi bi-instagram m-2"></i>
+            <i class="bi bi-facebook m-2"></i>
+            <i class="bi bi-twitter-x m-2"></i>
+          </h3>
+        </div>
+      </div>
+      <hr class="text-light">
+      <p class="text-center text-light">
+        2023-20024 HireHub® Global Inc.
+      </p>
+    </div>
+  </footer>
+</div>

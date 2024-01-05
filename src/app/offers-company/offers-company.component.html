@@ -1,0 +1,135 @@
+
+
+<div class="bg_color_palette_gris">
+  <nav class="navbar navbar-expand-lg fw-bold bg_color_palette_gris">
+    <div class="container-fluid">
+      <a class="navbar-brand ms-3" routerLink="/companyconnect">
+        <img src="../../assets/home/logo.png" alt="Logo" height="75px">
+      </a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" routerLink="/companyconnect">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" routerLink="/offerscompany">Offers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/freelancercc">Freelancers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/addoffercompany">Add offer</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/favoritefreelancers">Favorite list</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0 me-3">
+          <div class="input-group border_card_color_palette_dark_cyan ">
+            <input class="form-control" type="search" placeholder="Rechercher"
+              aria-label="Search">
+            <div class="input-group-append">
+              <button
+                class="btn btn_bg_outline_color_palette_dark_cyan rounded-0 "
+                type="submit">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+        <button type="button"
+          class="btn_bg_outline_color_palette_orange m-3"
+          routerLink="/companyprofil">Companny X</button>
+        <img src="../../assets/home/logo.png" alt="Logo" height="50px">
+      </div>
+    </div>
+  </nav>
+  <hr>
+
+
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col" *ngFor="let offer of offers">
+        <div class="card h-100 rounded-0">
+          <div class="card-body text-center">
+            <h5 class="card-title">{{ offer.titre }}</h5>
+            <p>{{ offer.topic }}</p>
+            <!-- ... autres éléments du projet ... -->
+            <h3>
+              <span *ngIf="offer.done === true" class="badge rounded-pill text-bg-success">done</span>
+              <span *ngIf="offer.done === false" class="badge rounded-pill text-bg-danger">undone</span>
+            </h3>
+          </div>
+          <div class="d-grid gap-2">
+            <button class="btn btn_bg_color_palette_orange rounded-0" type="button" (click)="openModal(offer)">Button</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+      <ng-template #doneContent let-modal>
+        <!-- Modal for done projects -->
+        <div class="modal-header">
+          <h4 class="modal-title">Done Project Modal</h4>
+          <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss()"></button>
+        </div>
+        <div class="modal-body" >
+          <p>aaa</p>
+        </div>
+        <div class="modal-footer">
+          <p class="text-decoration-underline">This project was done by:</p>
+          <p>Flen Fouleni</p>
+          <button type="button" class="btn btn-secondary" (click)="modal.close()">Close</button>
+        </div>
+      </ng-template>
+
+      <ng-template #undoneContent let-modal *ngFor="let offer of offers">
+        <!-- Modal for undone projects -->
+        <div class="modal-header" >
+          <h4 class="modal-title" >Undone Project Modal</h4>
+          <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss()"></button>
+        </div>
+        <div class="modal-body" >
+          <p></p>
+          <p><a routerLink="/interestedfreelancers" class="link-underline-info">Info underline</a></p>
+        </div>
+        <div class="modal-footer" >
+            <button type="button" class="btn btn-success" (click)="setOfferDone(offer.id)">Change Status</button>
+         
+          <button type="button" class="btn btn-secondary" (click)="modal.close()">Close</button>
+          
+        </div>
+      </ng-template>
+
+
+  <footer class="text-body-secondary mt-5 py-5 bg_color_palette_footer mb-0 ">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col">
+
+          <img src="../../assets/home/logo_foot.png" alt="Logo" height="75px">
+          <br>
+          <a class="navbar-brand ms-3" routerLink="/home"><p class="text-decoration-underline text-light">More informations</p>
+          </a>
+          <p class="text-light">Designed and built with all the love in the
+            world by the HireHub
+            team with the help of our contributors.</p>
+        </div>
+        <div class="col">
+        </div>
+        <div class="col">
+          <h3 class="text-light ">
+            <p>Follow us</p>
+            <i class="bi bi-instagram m-2"></i>
+            <i class="bi bi-facebook m-2"></i>
+            <i class="bi bi-twitter-x m-2"></i>
+          </h3>
+        </div>
+      </div>
+      <hr class="text-light">
+     <p class="text-center text-light">
+      2023-20024 HireHub® Global Inc.
+     </p>
+    </div>
+  </footer>
+</div>

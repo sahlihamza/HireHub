@@ -1,0 +1,59 @@
+.container{
+  margin-top: -4cm;
+}
+.logo{
+  width: 200px;
+  background-color: #EAEEEF;
+  margin: 1cm;
+}
+
+.form{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+input{
+  border-color: black;
+}
+
+.right{
+  margin-top: 6cm;
+  margin-right: 3cm;
+}
+
+
+h3{
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: -3cm;
+  color: #4A9DC9;
+}
+
+.btn{
+  color: white;
+  background-color: #F18620;
+  margin-left: 3cm;
+  width: 5cm;
+}
+.mb-3{
+  padding-bottom: 5px;
+}
+
+label{
+  margin-bottom:20px ;
+}
+h5{
+  text-align: center;
+  margin-top: 20px;
+  margin-left: -20px;
+}
+.rounded-circle{
+  width: 1.5cm;
+  height: 1.5cm;
+
+}
+
+.lienSignUp{
+  text-decoration: underline;
+  color: black;
+}

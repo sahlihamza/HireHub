@@ -1,0 +1,116 @@
+
+.bg_color_palette_gris {
+  background-color: #EAEEEF;
+}
+.btn_bg_color_palette_orange {
+  background-color: #F18620;
+  border:solid #F18620;
+  color: #ffffff;
+
+}
+.btn_bg_color_palette_orange:hover {
+  background-color: #ffffff;
+  color: #F18620;
+  border: solid #F18620;
+}
+
+.btn_bg_outline_color_palette_orange {
+  background-color: #EAEEEF;
+  border:solid #F18620;
+  color: #F18620;
+}
+.btn_bg_outline_color_palette_orange:hover {
+  background-color: #F18620;
+  color: #EAEEEF;
+  border: solid #EAEEEF;
+}
+
+.bg_color_palette_orange {
+  background-color: #F18620;
+}
+.border_card_color_palette_orange {
+  border: solid #F18620;
+}
+.text_color_palette_orange {
+ color:#F18620 ;
+}
+
+
+
+
+
+
+.btn_bg_color_palette_dark_cyan {
+  background-color: #4A9DC9;
+  border:solid #4A9DC9;
+  color: #ffffff;
+
+}
+.btn_bg_color_palette_dark_cyan:hover {
+  background-color: #ffffff;
+  color: #4A9DC9;
+  border: solid #4A9DC9;
+}
+
+.btn_bg_outline_color_palette_dark_cyan {
+  background-color: #EAEEEF;
+  border:solid #4A9DC9;
+  color: #4A9DC9;
+}
+.btn_bg_outline_color_dark_cyan:hover {
+  background-color: #4A9DC9;
+  color: #EAEEEF;
+  border: solid #EAEEEF;
+}
+
+.bg_color_palette_dark_cyan {
+  background-color: #4A9DC9;
+}
+.border_card_color_palette_dark_cyan {
+  border: solid #4A9DC9;
+}
+.text_color_palette_dark_cyan {
+ color:#4A9DC9 ;
+}
+
+
+
+
+
+
+
+.bg_color_palette_light_orange {
+  background-color: #f6ce97;
+}
+.border_card_color_palette_light_orange {
+  border: solid #f6ce97;
+}
+
+
+
+.bg_color_palette_light_peach {
+  background-color: #eee3d0;
+}
+
+.bg_color_palette_light_blue {
+  background-color: #d6e9f0;
+}
+
+.btn_bg_outline_color_palette_orange_blue {
+  background-color: #d6e9f0;
+  border:solid #F18620;
+  color: #F18620;
+}
+.btn_bg_outline_color_palette_orange_blue:hover {
+  background-color: #F18620;
+  color: #d6e9f0;
+  border: solid #d6e9f0;
+}
+.hr_orange{border: 2px solid #F18620;
+            margin-top: 20px;
+            margin-bottom: 20px;
+          margin-left: 30px;
+        margin-right:30px ;}
+        .bg_color_palette_footer {
+          background-color: #404A59;
+        }

@@ -1,0 +1,33 @@
+/* messaging.component.css */
+
+.message-container {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.sent {
+  background-color: #e1f5fe;
+  text-align: right;
+}
+
+.received {
+  background-color: #fff;
+  text-align: left;
+}
+
+.message-input {
+  margin-top: 20px;
+}
+
+textarea {
+  width: 80%;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 5px;
+}

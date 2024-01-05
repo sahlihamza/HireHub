@@ -1,0 +1,56 @@
+.logo{
+  width: 200px;
+  background-color: #EAEEEF;
+  margin: 0.5cm;
+}
+
+
+.btn{
+  color: white;
+  background-color: #F18620;
+  margin-left: 12.4cm;
+  margin-top: -1cm;
+  width: 7cm;
+}
+
+.lienSignUp{
+  text-decoration: underline;
+  color: black;
+}
+.card{
+  background-color:#EAEEEF ;
+  margin: 50px;
+  border-radius: 20px;
+  border-width: 3px;
+  border-color: black;
+  margin-top: 20px;
+
+}
+h1{
+  text-align: center;
+  margin-top: 25px;
+  color: #F18620;
+}
+
+
+h6{
+margin-left: 13.3cm;
+margin-top: 5px;
+}
+h3{
+
+  text-align: center;
+}
+.first{
+  margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
